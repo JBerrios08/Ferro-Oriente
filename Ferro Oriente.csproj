@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.33\lib\net48\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -97,6 +100,10 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\CartItem.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Nosotros.aspx.cs">
       <DependentUpon>Nosotros.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -111,6 +118,10 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Services\AuthService.cs" />
+    <Compile Include="Services\CartService.cs" />
+    <Compile Include="Services\CatalogService.cs" />
+    <Compile Include="Services\Database.cs" />
     <Compile Include="Tienda.aspx.cs">
       <DependentUpon>Tienda.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
