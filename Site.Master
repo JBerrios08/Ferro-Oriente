@@ -17,12 +17,23 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="mainNavbar">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
                         <li class="nav-item"><a class="nav-link" href="Default.aspx">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="Nosotros.aspx">Nosotros</a></li>
                         <li class="nav-item"><a class="nav-link" href="Tienda.aspx">Tienda</a></li>
                         <li class="nav-item"><a class="nav-link" href="Contacto.aspx">Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Login.aspx">Login</a></li>
+                        <li class="nav-item" runat="server" id="liCarrito"><a class="nav-link" href="Tienda.aspx#carrito">Carrito (<asp:Literal ID="litCartCount" runat="server" />)</a></li>
+                        <asp:PlaceHolder ID="phAuthenticated" runat="server">
+                            <li class="nav-item text-white ms-lg-3">
+                                <span class="navbar-text small">Hola, <asp:Literal ID="litUserName" runat="server" /> (<asp:Literal ID="litUserRole" runat="server" />)</span>
+                            </li>
+                            <li class="nav-item">
+                                <asp:LinkButton ID="lnkLogout" runat="server" CssClass="nav-link" OnClick="Logout_Click">Salir</asp:LinkButton>
+                            </li>
+                        </asp:PlaceHolder>
+                        <asp:PlaceHolder ID="phAnonymous" runat="server">
+                            <li class="nav-item"><a class="nav-link" href="Login.aspx">Login</a></li>
+                        </asp:PlaceHolder>
                     </ul>
                 </div>
             </div>

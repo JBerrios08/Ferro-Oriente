@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.33\lib\net48\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -66,12 +69,13 @@
       <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Contacto.aspx" />
-    <Content Include="Default.aspx" />
-    <Content Include="Login.aspx" />
-    <Content Include="Nosotros.aspx" />
-    <Content Include="Site.Master" />
+    <ItemGroup>
+      <Content Include="Contacto.aspx" />
+      <Content Include="Default.aspx" />
+      <Content Include="Global.asax" />
+      <Content Include="Login.aspx" />
+      <Content Include="Nosotros.aspx" />
+      <Content Include="Site.Master" />
     <Content Include="Tienda.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -83,20 +87,27 @@
     <Compile Include="Contacto.aspx.designer.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+      <Compile Include="Default.aspx.cs">
+        <DependentUpon>Default.aspx</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
+      </Compile>
+      <Compile Include="Default.aspx.designer.cs">
+        <DependentUpon>Default.aspx</DependentUpon>
+      </Compile>
+      <Compile Include="Global.asax.cs">
+        <DependentUpon>Global.asax</DependentUpon>
+      </Compile>
+      <Compile Include="Login.aspx.cs">
+        <DependentUpon>Login.aspx</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\CartItem.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Nosotros.aspx.cs">
       <DependentUpon>Nosotros.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -111,6 +122,10 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Services\AuthService.cs" />
+    <Compile Include="Services\CartService.cs" />
+    <Compile Include="Services\CatalogService.cs" />
+    <Compile Include="Services\Database.cs" />
     <Compile Include="Tienda.aspx.cs">
       <DependentUpon>Tienda.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
