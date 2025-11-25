@@ -69,12 +69,13 @@
       <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Contacto.aspx" />
-    <Content Include="Default.aspx" />
-    <Content Include="Login.aspx" />
-    <Content Include="Nosotros.aspx" />
-    <Content Include="Site.Master" />
+    <ItemGroup>
+      <Content Include="Contacto.aspx" />
+      <Content Include="Default.aspx" />
+      <Content Include="Global.asax" />
+      <Content Include="Login.aspx" />
+      <Content Include="Nosotros.aspx" />
+      <Content Include="Site.Master" />
     <Content Include="Tienda.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -86,16 +87,19 @@
     <Compile Include="Contacto.aspx.designer.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+      <Compile Include="Default.aspx.cs">
+        <DependentUpon>Default.aspx</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
+      </Compile>
+      <Compile Include="Default.aspx.designer.cs">
+        <DependentUpon>Default.aspx</DependentUpon>
+      </Compile>
+      <Compile Include="Global.asax.cs">
+        <DependentUpon>Global.asax</DependentUpon>
+      </Compile>
+      <Compile Include="Login.aspx.cs">
+        <DependentUpon>Login.aspx</DependentUpon>
+        <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
